@@ -1,0 +1,161 @@
+<a class="skip-navigation" tabindex="1" href="#main-content">{{t 'skip_navigation' }}</a>
+
+<header class="header">
+  <div class="logo">
+    {{#link 'help_center'}}
+      <img src="{{settings.logo}}">
+    {{/link}}
+  </div>
+	<div class="nav-items">
+    <div class="nav-item"><a href="https://phrozen3d.com/pages/resin-profile">{{dc 'h_phrozen_help_center_resin_profile'}}</a></div>
+    <div class="nav-item"><a href="https://helpcenter.phrozen3d.com/hc/en-us/articles/6369983852569-Firmware-downloads">{{dc 'h_phrozen_help_firmware'}}</a></div>
+    <div class="nav-item"><a href="#section-footer">{{dc 'h_phrozen_help_policies'}}</a></div>
+  </div>
+  <div class="nav-wrapper-desktop">
+    <nav class="user-nav" id="user-nav">
+      <ul class="user-nav-list">
+       <li class="footer-language-selector">
+      {{#if alternative_locales}}
+        <div class="dropdown language-selector">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_locale.name}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </button>
+          <span class="dropdown-menu dropdown-menu-end" role="menu">
+            {{#each alternative_locales}}
+              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </div>
+      {{/if}}
+    	</li>
+        <li>{{link 'new_request' class='submit-a-request'}}</li>
+        {{#unless signed_in}}
+          <li>
+            {{#link "sign_in" class="sign-in"}}
+              {{t 'sign_in'}}
+            {{/link}}
+          </li>
+        {{/unless}}
+      </ul>
+    </nav>
+    {{#if signed_in}}
+      <div class="user-info dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+          {{user_avatar class="user-avatar"}}
+          <span>
+            {{user_name}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          {{#my_profile role="menuitem"}}{{t 'profile'}}{{/my_profile}}
+          {{link "requests" role="menuitem"}}
+          {{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}
+          {{contact_details role="menuitem"}}
+          {{change_password role="menuitem"}}
+          <div class="separator" role="separator"></div>
+          {{link "sign_out" role="menuitem"}}
+        </div>
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="nav-wrapper-mobile">
+    <button class="menu-button-mobile" aria-controls="user-nav-mobile" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
+      {{#if signed_in}}
+        {{user_avatar class="user-avatar"}}
+      {{/if}}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
+      </svg>
+    </button>
+    <nav class="menu-list-mobile" id="user-nav-mobile" aria-expanded="false">
+      <ul class="menu-list-mobile-items">
+        {{#if signed_in}}
+        	<li>signed in </li>
+          <li class="user-avatar-item item">
+            {{#my_profile role="menuitem" class="my-profile"}}
+              {{user_avatar class="menu-profile-avatar"}}
+              <div class="menu-profile-name">
+                <div>{{user_name}}</div>
+                <div class="my-profile-tooltip">{{t 'profile'}}</div>
+              </div>
+            {{/my_profile}}
+          </li>
+          <li class="item">{{link "requests" role="menuitem"}}</li>
+          <li class="item">{{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}</li>
+          <li class="item">{{contact_details role="menuitem"}}</li>
+          <li class="item">{{change_password role="menuitem" class='change-password'}}</li>
+          <li class="nav-divider"></li>
+        {{else}}
+          <li class="item">
+            {{#link "sign_in" role="menuitem"}}
+              {{t 'sign_in'}}
+            {{/link}}
+          </li>
+          <li class="nav-divider"></li>
+        {{/if}}
+        <li class="item">{{link 'community' role="menuitem"}}</li>
+        <li class="item">{{link 'new_request' role="menuitem" class='submit-a-request'}}</li>
+        <li class="item"><a href="https://phrozen3d.com/pages/resin-profile">Resin Profile</a></li>
+        <li class="item"><a href="https://helpcenter.phrozen3d.com/hc/en-us/sections/18933363979545-Firmware">Firmware</a></li>
+        <li class="item"><a href="https://phrozen3d.com/pages/warranty-policy">Policies</a></li>
+        <li class="nav-divider"></li>
+        {{#if signed_in}}
+          <li class="item">
+            {{link "sign_out" role="menuitem"}}
+          </li>
+        {{/if}}
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+<style>
+
+.header .nav-items {
+	display: none;
+  margin-right: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .header .nav-items {
+  	display: flex;
+  }
+}  
+@media (min-width: 1080px) {
+  .header .nav-items {
+  	margin-right: 6rem;
+  }
+}  
+  
+.header .nav-items .nav-item  {
+	margin: 0 0.625rem
+}
+
+.header .nav-items .nav-item a {
+	font-weight: 700;
+  display: inline-block;
+}
+  
+a, a:visited, .user-info > button, .nav-wrapper-desktop a {
+  color: #fff;
+}
+
+a:hover {
+  color: rgba(253, 236, 182, 1)
+}
+
+.user-nav .submit-a-request {
+  margin-left: 1.25rem;
+  font-weight: 700;
+  }
+</style>

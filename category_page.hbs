@@ -1,0 +1,164 @@
+<div class="category-banner">
+  <img class="category-banner-image" src="{{asset 'HelpCenter_Category_banner_2160x500.jpg'}}" />
+</div>
+<div class="container">
+  <div class="category-container">
+    <div class="machine-container">
+      {{#if (compare category.name "==" 'Sonic Mini')}}
+        <img class="machine-image" src="{{asset 'Sonic_Mini.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Sonic Mini 4K')}}
+        <img class="machine-image mini" src="{{asset 'Sonic_Mini_4K.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Sonic Mini 8K')}}
+        <img class="machine-image mini" src="{{asset 'Sonic_Mini_8K.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Sonic Mini 8K S')}}
+        <img class="machine-image" src="{{asset 'Sonic_Mini_8K_S.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Sonic Mighty 4K')}}
+        <img class="machine-image mighty" src="{{asset 'Sonic_Mighty_4K.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Sonic Mighty 8K')}}
+        <img class="machine-image mighty" src="{{asset 'Sonic_Mighty_8K.png'}}" />
+      {{/if}}
+			{{#if (compare category.name "==" 'Sonic Mighty 12K')}}
+        <img class="machine-image" src="{{asset 'Sonic_Mighty_12K.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Sonic Mega 8K')}}
+        <img class="machine-image mega" src="{{asset 'Sonic_Mega_8K.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Sonic Mega 8K S')}}
+        <img class="machine-image mega" src="{{asset 'Sonic_Mega_8K_S.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Wash & Cure Station')}}
+        <img class="machine-image" src="{{asset 'Wash_and_Cure_Station.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Wash Mega S')}}
+        <img class="machine-image" src="{{asset 'Wash_Mega_S.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Cure Mega S')}}
+        <img class="machine-image" src="{{asset 'Cure_Mega_S.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Transform & Shuffle Series')}}
+        <img class="machine-image" src="{{asset 'Transform_Shuffle_Series.png'}}" />
+      {{/if}}
+        {{#if (compare category.name "==" 'PHROZEN ARCO')}}
+        <img class="machine-image" src="{{asset 'Acro_Chroma_Kit.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Orders & Shipping')}}
+        <img class="machine-image" src="{{asset 'Order_Shipping.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" '訂單&運輸')}}
+        <img class="machine-image" src="{{asset 'Order_Shipping.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Software')}}
+        <img class="machine-image" src="{{asset 'Slicer.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" '軟體')}}
+        <img class="machine-image" src="{{asset 'Slicer.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" 'Common Queries')}}
+        <img class="machine-image" src="{{asset 'Common_Queries.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" "Beginner's Guide")}}
+        <img class="machine-image" src="{{asset 'Beginner_Guide.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" "Knowledge Hub")}}
+        <img class="machine-image" src="{{asset 'Knowledge_Hub.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" "Printing Issues")}}
+        <img class="machine-image" src="{{asset '3D_Printing_Tips.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" '常見問題')}}
+        <img class="machine-image" src="{{asset 'Common_Queries.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" "新手指南")}}
+        <img class="machine-image" src="{{asset 'Beginner_Guide.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" "知識庫")}}
+        <img class="machine-image" src="{{asset 'Knowledge_Hub.png'}}" />
+      {{/if}}
+      {{#if (compare category.name "==" "列印問題")}}
+        <img class="machine-image" src="{{asset '3D_Printing_Tips.png'}}" />
+      {{/if}}
+      
+     	<div class="machine-info">
+        <nav class="">{{breadcrumbs}}</nav>
+ 	      <h1 class="category-name">{{category.name}}</h1>
+        <hr class="rouge-line" />
+        <div class="machine-content">
+          <div class="font-bold machine-warranty flex space-between items-center my-2">
+            {{dc 'h_phrozen_help_center_warranty_policy'}}
+            <span class="warranty-btn">+</span>
+          </div>
+            <div class="warranty-wrapper">
+              <ul class="warranty-list flex flex-wrap space-between">
+              </ul>
+            </div>
+          <hr/>
+          <div class="font-bold machine-specs flex space-between items-center my-2">
+            {{dc 'h_phrozen_help_center_specs'}}
+            <span class="specs-btn">+</span>
+          </div>
+            <div class="specs-wrapper">
+              <ul class="specs-list flex flex-wrap space-between">
+              </ul>
+            </div>
+          <hr/>
+          <div class="font-bold machine-manual flex space-between items-center my-2">
+            {{dc 'h_phrozen_help_center_user_manual'}}
+            <a href="#" class="machine-manual-link" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 160 160">
+                  <image id="icon" x="44" y="42" width="100" height="100" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAACJUlEQVQ4jXTMsQnAIBRAQUtr53Ht7OECzhD4FilPBAWbFK87XkLGg8D3U0PB8qeK9/JjPwJ9AgAA//9iYWBgWM7AwODFgB/oMzAwcKIpkWZgYBDAqo2BgRcAAAD//2L8D7IeAjoZGBh241B4i4GB4TEWcQsGBoa/DAwMfAwMDIsYGBikwKIMDJ8AAAAA//8CeekPyPD///+ronmVFDwHagYE/P//CQAAAP//YmJgYPgNtUWOQHDgAocZGBiSoZILGBgYrjEwMHADAAAA//8CGUwJOMLAwGADNWA2AwNDIgMDAysDAwMTAAAA//8CeQMUoyDgTKL3jyB5fQmS+P//////BwAAAP//ItdgZEOXosl1/f///xwAAAD//yLHYFwuReD//xkAAAAA//8ixWBQ0jyEx6UI/P8/AwAAAP//ItZgTgLeR8X//zMAAAAA//8iNlXwMjAwWEPZoJwajVc1AwMDAAAA//8CZWliwCsGBoY0aDZuIKAhhoGBwQIAAAD//6IkueHC//////8fAAAA//+iNINgAx8ZGBgYAAAAAP//ooXBvxkYGBgAAAAA//+ihcEMDAwMDAAAAAD//6KNwQwMDAAAAAD//wIZDDP8E5XM/MvAwMAAAAAA//8CGcoGFZCggqGM4JqGgYEBAAAA//8CZdNnDAwMklCJNxQaDDKUm4GBgQEAAAD//wIZDKrvljAwMAhS7F4I+MzAwHAYAAAA//8DAHoma0C3prGjAAAAAElFTkSuQmCC"/>
+              </svg>
+            </a>
+          </div>
+          <hr class="last-hr"/>
+            <div class="font-bold machine-resin flex space-between items-center my-2">
+              {{category.name}} {{dc 'h_phrozen_help_center_resin_profile'}}
+              <a href="#" class="machine-resin-link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 160 160">
+                    <image id="icon" x="44" y="42" width="100" height="100" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAACJUlEQVQ4jXTMsQnAIBRAQUtr53Ht7OECzhD4FilPBAWbFK87XkLGg8D3U0PB8qeK9/JjPwJ9AgAA//9iYWBgWM7AwODFgB/oMzAwcKIpkWZgYBDAqo2BgRcAAAD//2L8D7IeAjoZGBh241B4i4GB4TEWcQsGBoa/DAwMfAwMDIsYGBikwKIMDJ8AAAAA//8CeekPyPD///+ronmVFDwHagYE/P//CQAAAP//YmJgYPgNtUWOQHDgAocZGBiSoZILGBgYrjEwMHADAAAA//8CGUwJOMLAwGADNWA2AwNDIgMDAysDAwMTAAAA//8CeQMUoyDgTKL3jyB5fQmS+P//////BwAAAP//ItdgZEOXosl1/f///xwAAAD//yLHYFwuReD//xkAAAAA//8ixWBQ0jyEx6UI/P8/AwAAAP//ItZgTgLeR8X//zMAAAAA//8iNlXwMjAwWEPZoJwajVc1AwMDAAAA//8CZWliwCsGBoY0aDZuIKAhhoGBwQIAAAD//6IkueHC//////8fAAAA//+iNINgAx8ZGBgYAAAAAP//ooXBvxkYGBgAAAAA//+ihcEMDAwMDAAAAAD//6KNwQwMDAAAAAD//wIZDDP8E5XM/MvAwMAAAAAA//8CGcoGFZCggqGM4JqGgYEBAAAA//8CZdNnDAwMklCJNxQaDDKUm4GBgQEAAAD//wIZDKrvljAwMAhS7F4I+MzAwHAYAAAA//8DAHoma0C3prGjAAAAAElFTkSuQmCC"/>
+                </svg>
+              </a>
+            </div>
+        </div>
+        <hr class="rouge-line"/>
+      </div>
+    </div>
+    <h1 class="category-section-title"></h1>
+    <div class="select-btns">
+      {{#each sections}}
+      	<input type="radio" name="categoryInput" id="{{name}}"> <label  class="select-btn categroy-btn"  for="{{name}}">{{name}}</label>
+      {{/each}}
+      
+      <div class="category-cards">
+          {{#each sections}}
+            <div class="{{name}} section-flex">
+              {{#each articles}}
+                <div class="category-card">
+                 <a href="{{url}}" class="article-image-link">
+
+                  <img src="https://phrozen3d.com.tw/cdn/shop/files/718KS_1400x1600_01_14b22783-8e9d-4df3-b044-7d390edcb3ec.png?v=1695112910&width=400" alt="${article.title}" class="category-article-image">
+                </a>
+                  <a href="{{url}}" class="article-list-link">
+                    {{#if promoted}}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-star" title="{{t 'promoted'}}">
+                        <path fill="currentColor" d="M2.88 11.73c-.19 0-.39-.06-.55-.18a.938.938 0 01-.37-1.01l.8-3L.35 5.57a.938.938 0 01-.3-1.03c.12-.37.45-.63.85-.65L4 3.73 5.12.83c.14-.37.49-.61.88-.61s.74.24.88.6L8 3.73l3.11.17a.946.946 0 01.55 1.68L9.24 7.53l.8 3a.95.95 0 01-1.43 1.04L6 9.88l-2.61 1.69c-.16.1-.34.16-.51.16z"/>
+                      </svg>
+                    {{/if}}
+                    {{title}} </a>
+                </div>
+              {{/each}} 
+            </div>
+        		{{#if more_articles}}
+              <a href="{{url}}" class="see-all-articles hidden">
+                {{t 'show_all_articles' count=article_count}}
+              </a>
+            {{/if}} 
+        {{/each}}
+      </div>
+  	</div>
+  </div>
+</div>

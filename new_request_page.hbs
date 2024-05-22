@@ -1,0 +1,30 @@
+<div>
+  <div class="container-divider"></div>
+<div class="container">
+  <nav class="sub-nav">
+    {{breadcrumbs}}
+	</nav>
+
+  <h1>
+    {{t 'submit_a_request'}}
+    <span class="follow-up-hint">
+      {{follow_up}}
+    </span>
+  </h1>
+
+  <div id="main-content" class="form">
+    {{request_form wysiwyg=true}}
+    <p style="color: red;"></p>
+  </div>
+</div>
+
+<script>
+  <!-- change title   -->
+  var attachemnt = document.querySelector('label[for="request-attachments"]');
+	attachemnt.innerText = 'Attachments';
+  <!--  add desc  -->
+  var description = document.createElement('p');
+  description.innerText = 'Photos and videos uploaded will help us answer your question.';
+<!--   description.style.color = 'red'; -->
+  attachemnt.appendChild(description);
+</script>
